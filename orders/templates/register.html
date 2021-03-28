@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block body %}
+<h1>Register Here!</h1>
+{% if message %}
+    {{ message }}
+{% endif %}
+<form action="{% url 'register' %}" method="post">
+    First Name: <input name="name" type="text">
+    Email Address: <input name="email" type="text">
+    Username: <input name="username" type="text">
+    Password: <input name="password" type="password">
+    <button>Submit</button>
+</form>
